@@ -320,6 +320,8 @@
      box-shadow: var(--shadow-md);
  }
 
+ 
+
  .back-to-top.visible {
      opacity: 1;
      visibility: visible;
