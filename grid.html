@@ -102,8 +102,18 @@
 
     <div class="grid">
         <div class="item item-0">0</div>
-        <div class="item item-1">1</div>
-        <div class="item item-2">2</div>
+        <div class="item item-1" onclick="window.location.href='js-audio-visualizer/src/index.html'">1</div>
+        <div class="item item-2" onclick="window.location.href='boots/index.html'">
+            <div class="contenedor-tag">
+                <span class="card-tag">Responsive</span>
+                <span class="card-tag2">Templates</span>
+                <h2 class="card-title">Bootstrap 5</h2>
+                <div class="card-footer">
+                    <p>Boostrap framework</p>
+                    <p>6.10.2025</p>
+                </div>
+            </div>
+        </div>
         <div class="item item-3">3</div>
         <div class="item item-4 mobile-only">4</div>
         <div class="item item-5">5</div>
@@ -268,7 +278,7 @@
         }
 
         body {
-            background-color: #c79e9e;
+            background-color: #000000;
         }
 
         .grid {
@@ -276,6 +286,35 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(10, 1fr);
             gap: 8px;
+        }
+
+        .card-tag {
+            background-color: rgb(35, 84, 100);
+            font-weight: 600;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .card-tag2 {
+            background-color: rgb(71, 35, 100);
+            font-weight: 600;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .card-title {
+            margin-top: 30px;
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+
+        .card-footer {
+            font-size: 15px;
+            color: #8b8a8a;
         }
 
         .item {
@@ -305,9 +344,18 @@
             grid-row: 2 / span 2;
         }
 
+        .item-1:hover {
+            background-color: #4d4d4d;
+        }
+
         .item-2 {
             grid-column: 1 / span 3;
             grid-row: 4 / span 2;
+        }
+        
+        .item-2:hover{
+            background: #2A7B9B;
+            background: linear-gradient(90deg, rgb(21, 69, 88) 0%, rgb(160, 136, 85) 50%, rgb(150, 140, 56) 100%);
         }
 
         .item-3 {
@@ -340,6 +388,8 @@
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-rows: repeat(5, 1fr);
                 gap: 8px;
+                margin-left: 100px;
+                margin-right: 100px;
             }
 
             .mobile-only {
