@@ -9,7 +9,7 @@
 
 <body>
     <div class="contenedor">
-        <form action="https://script.google.com/macros/s/AKfycbzWy0yMhQo0tEnjWOXtWaq5MTNYFOBrbDa3wOT7iODTPK6EtIAuDIAfNPuRNAeHpw2e/exec" name="excel-form" method="post">
+        <form action="https://script.google.com/macros/s/AKfycbyzwbEtBdLBLrIZow47FjRW7k0Qy56HZCgPcQHAaf3EMCsiiyNABbCnCYg8U4b6XlxQ3Q/exec" name="excel-form" method="post">
             <h4>Contáctenos</h4> <br>
             <input type="text" name="nombre" placeholder="Nombre Completo"> <br><br>
             <input type="number" name="telefono" placeholder="Número de Teléfono"> <br><br>
@@ -88,15 +88,15 @@
         }
     </style>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzWy0yMhQo0tEnjWOXtWaq5MTNYFOBrbDa3wOT7iODTPK6EtIAuDIAfNPuRNAeHpw2e/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyzwbEtBdLBLrIZow47FjRW7k0Qy56HZCgPcQHAaf3EMCsiiyNABbCnCYg8U4b6XlxQ3Q/exec'
         const form = document.forms['excel-form']
-        form.addEventListener('submit', e=>{
+        form.addEventListener('submit', e => {
             e.preventDefault()
-            fetch(scriptURL, {method: 'POST', body: new FormData(form)})
-            .then(response => alert("Datos Enviados Correctamente"))
-            .then(() => {window.location.reload();})
-            .catch(error => console.error('Error al enviar los datos! ', error.message))
-        })    
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Datos del Formulario Enviados"))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error en enviar los datos!', error.message))
+        })
 
     </script>
 </body>
